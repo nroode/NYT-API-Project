@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="ny.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="NYstyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Economica" rel="stylesheet">
+    <title>NY Times API Project</title>
+
+</head>
+
+<body>
+
+    <!-- <div class="parallax-container">
+        <div class="parallax"> -->
+    <div class="titlebk">
+        <div class="border">
+            <h1 id="title">What would you like to read about?</h1>
+
+            <!-- <img class="responsive-img" src="http://theievoice.com/wp-content/uploads/2017/10/o-NEWSPAPERS-facebook.jpg"> -->
+
+            <div class="search">
+
+                <div class="container results">
+                    <form onsubmit="searchNYT(event)">
+                        <div class="searchTerm">
+                            <label for="uname"></label>
+                            <input type="text" id="searchTerm" name="name" placeholder="Kittens">
+                            <span>
+                                <button type="submit">Search</button>
+                            </span>
+                        </div>
+
+                    </form>
+
+                    <ul id="headlines">
+                            
+                        <!-- <img src="https://gifimage.net/wp-content/uploads/2017/09/animated-gif-transparent-background-14.gif"> -->
+                        <!-- List article titles HERE!!!! -->
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- </div>
+
+    </div> -->
+
+
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+        function searchNYT(event) {
+            event.preventDefault();
+            let searchTerm = document.getElementById("searchTerm").value
+
+            nytUrl = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchTerm}&sort=newest&api-key=72ff07c4d1df4029a933df5e2ae7fedd`
+            $.getJSON(nytUrl, function (data) {
+
+                var myLi = ''
+                var articles = data.response.docs;
+
+                for (var i = 0; i < articles.length; i++) {
+                    myLi += `<li><a href ="${articles[i].web_url}"><span class="headTitle"> ${articles[i].headline.main}</span><br><span class="snippet">${articles[i].snippet}</span></a></li>`;
+                }
+                document.getElementById("headlines").innerHTML = myLi;
+
+                console.log(data)
+            })
+            // return "<li>" + headline.myLi + "</li>"
+
+            // console.log(data.response.docs[0].headline.main);
+
+            //CODE GOES HERE
+            //  document.getElementById("headlines").innerHTML = "<li>I like cheese</li>";;
+        }
+        // document.getElementById("headlines").innerHTML = "<li> myLi </li>";;
+        $(document).ready(function () {
+            $('.parallax').parallax();
+        });
+    </script>
+
+</body>

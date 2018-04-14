@@ -1,0 +1,163 @@
+#headlines {
+font-size: 22px;
+font-family: 'Poppins', sans-serif;
+
+}
+
+html {
+    height: 100%;
+}
+
+#headlines li {
+    padding: 4%;
+    /* border: 1px solid grey; */
+    margin-bottom: 5%;
+    background-color: rgba(31, 28, 28, 0.219);
+    
+    
+}
+
+button {
+    background:rgb(54, 21, 204);
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 30px;
+    box-shadow: 10px;
+    color: white;
+    margin-bottom: 10px;
+    margin-left: 5px;
+   border: 1px solid rgb(54, 21, 204);
+   height: 50px;
+   padding: 0px 10px;
+    
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    margin: 0;
+    color: grey;
+}
+
+#title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    /* font-weight: bold; */
+    
+    margin-bottom: 0px;
+    text-shadow: 3px 3px 6px black;
+    /* padding-left: 5%;  */
+    
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /* background-color: rgba(57, 22, 73, 0.719); */
+    
+    color: white;
+    box-shadow: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 7;
+}
+
+.parallax-container {
+    height: 500px;
+    width: 100%;
+/*     
+    overflow-x: visible;
+    overflow-y: auto; */
+  }
+
+
+
+.titlebk {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding-top: 250px;
+    padding-bottom: 450px;
+    /* background-image: url('http://unitedstatesmapz.com/wp-content/uploads/2017/06/Empire-State-Building2.jpg'); */
+    background-image: url('http://theievoice.com/wp-content/uploads/2017/10/o-NEWSPAPERS-facebook.jpg');
+}
+
+.border {
+    margin: 0px 10%;
+    /* background-color: rgba(0, 0, 0, 0.363); */
+}
+
+/* .instructions {
+    background-color: rgb(154, 164, 184);
+    color: rgb(59, 59, 61);
+    width: 25%;
+    padding: 5%;
+    position: relative;
+    float: left;
+} */
+
+/* ol{
+    font: white;
+} */
+
+h1 {
+    margin: 0;
+}
+.search.searchTerm {
+    z-index: 1;
+}
+
+
+.searchTerm {
+  width: 500px;  
+    font-size: 2em;
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 100px;
+    /* background-color: rgb(131, 122, 131); */
+    border-radius: 30px;
+}
+
+form .searchTerm {
+    width: 500px; 
+    margin: 0 auto;
+}
+
+.searchTerm label{
+    font-size: 24px;  
+}
+
+#searchTerm {
+    background: white;
+    font-size: 24px; 
+    border-radius: 30px; 
+    /* float: left;
+    position: absolute; */
+    width: 300px;
+    padding-left: 20px;
+    height: 50px;
+}
+
+.container {
+    width: 100%;
+}
+
+#headlines img {
+    /* width: 350px; */
+    
+    }
+
+    .snippet {
+        font-size: 16px;
+
+    }
+
+    a {
+        /* color: rgb(52, 50, 54); */
+        color: white;
+        text-decoration: none;
+    }
+
+    .headTitle {
+        font-weight: bold;
+       
+    }
+
